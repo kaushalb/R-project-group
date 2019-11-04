@@ -24,4 +24,4 @@ a connection between all the factors being considered.
 
 
 **Link to project proposal** :
-201_AF7_proposal.md
+https://github.com/kaushalb/R-project-group/blob/master/201_AF7_proposal.md
