@@ -3,7 +3,7 @@ output:
   html_document: default
   pdf_document: default
 ---
-# The Generations that Killed Themselves  
+# Countries, Generations and Mental Health  
 ### Project: Death of a Boomer
   
 Harrison Liao  
