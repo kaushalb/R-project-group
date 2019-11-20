@@ -1,0 +1,15 @@
+﻿Variable Name,Description,Data Type,Measurement Type
+country,The country the observation is in,string,Categorical / nominal
+year,The year the observation took place,integer,interval
+sex,The sex of the the observation,string,Categorical 
+age,The age group of the observation,string,ordinal
+suicide_no,The number of people suicided of the observation,integer,ratio
+Suicides / 100k pop,"The suicide rate per 100,000 people of the observation",double,ratio
+HDI,The Human Development Index,double,ratio
+Gdp per year,The gross domestic product of the country of the year,double,ratio
+Gdp per capita,The gdp per person of the country,double,ratio
+generation,The generation the observation mainly belongs to,string,ordinal
+,,,
+,,,
+,,,
+,,,
