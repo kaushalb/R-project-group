@@ -6,27 +6,21 @@ library(ggplot2)
 suicide_rate <- read.csv("master.csv", fileEncoding="UTF-8-BOM")
 # Use a fluid Bootstrap layout
 visual_1 <- fluidPage(    
-  
-  # Give the page a title
-  titlePanel("Suicide Rate"),
-  
-  # Generate a row with a sidebar
-  sidebarLayout(      
-    
-    # Define the sidebar with one input
-    sidebarPanel(
-      selectInput("sex", "Gender:", 
-                  choices=c("male", "female")),
-      radioButtons("age","Age:",
-                   choices = ages),
-      hr(),
-      helpText("Data from Kaggle.")
+  titlePanel("Suicide Rate vs GDP per Capita"),
+  fluidRow(
+    column(3,
+           wellPanel(
+             h4("Filter"),
+             selectInput("sex", "display sex of the groups",
+                         c("All", "Male", "Female")
+             ),
+             textInput("country", "Country: ")
+           )
+           
     ),
-    
-    # Create a spot for the barplot
-    mainPanel(
-      plotOutput("phonePlot")  
+    column(9
+           #ggvisOutput("plot_1")
+            )
     )
-    
-  )
 )
+
