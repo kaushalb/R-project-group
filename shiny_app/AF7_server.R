@@ -1,7 +1,6 @@
 library(shiny)
 library(plotly)
 library(dplyr)
-library(rsconnect)
 library(ggplot2)
 library(rsconnect)
 suicide_rate <- read.csv("master.csv")
