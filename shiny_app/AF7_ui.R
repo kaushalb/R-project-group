@@ -13,6 +13,7 @@ source("page_5.R")
 source("page_6.R")
 source("group_members.R")
 source("appendix_1.R")
+source("appendix_2.R")
 suicide_rate <- read.csv("master.csv")
 ages <- unique(suicide_rate$age)
 # Use a fluid Bootstrap layout
@@ -29,7 +30,8 @@ ui_page <- dashboardPage(
       menuItem("4.0 Information Visualizations  ", tabName = "page_4"),
       menuItem("5.0 Technical description", tabName = "page_5"),
       menuItem("6.0 Conclusion", tabName = "page_6"),
-      menuItem("Appendix 1", tabName = "dictionary")
+      menuItem("Appendix 1", tabName = "dictionary"),
+      menuItem("Reflection of members", tabName = "reflection")
     )
   ),
   dashboardBody(
@@ -63,7 +65,10 @@ ui_page <- dashboardPage(
       ),
       tabItem(tabName = "dictionary",
         appendix_1        
-      )
+      ),
+      tabItem(tabName = "reflection",
+        appendix_2      
+              )
     )
   ) #dashbody end
 )
