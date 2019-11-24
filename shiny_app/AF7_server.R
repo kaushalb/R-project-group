@@ -3,12 +3,14 @@ library(plotly)
 library(dplyr)
 library(ggplot2)
 library(rsconnect)
+dictionary <- read.csv("dict.csv")
+present <- kable(dictionary)
 suicide_rate <- read.csv("master.csv")
 server_func <- function(input, output) {
   
   # Fill in the spot we created for a plot
   output$phonePlot <- renderPlot({
-    
+  output$table_a1 <- renderDataTable(present)
     # Render a plot
     suicide_rate <- read.csv("master.csv", fileEncoding = "UTF-8-BOM")
     df <-suicide_rate %>%

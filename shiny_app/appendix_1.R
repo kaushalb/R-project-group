@@ -1,7 +1,11 @@
 library(knitr)
 library(shiny)
-dictionary <- read.csv("dict.csv")
-present <- kable(dictionary)
+
 appendix_1 <- fluidPage(
-  tableOutput(present)
+  fluidRow(
+    column(12,
+      dataTableOutput("table_a1"),
+      h4("table not working")
+    )
+  )
 )
