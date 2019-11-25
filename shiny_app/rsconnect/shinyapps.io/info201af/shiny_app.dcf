@@ -1,0 +1,12 @@
+name: shiny_app
+title: shiny_app
+username:
+account: info201af
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 1520685
+bundleId: 2615025
+url: https://info201af.shinyapps.io/shiny_app/
+when: 1574665460.02734
+asMultiple: FALSE
+asStatic: FALSE
