@@ -25,3 +25,6 @@ a connection between all the factors being considered.
 
 **Link to project proposal** :
 https://github.com/kaushalb/R-project-group/blob/master/201_AF7_proposal.md
+
+**Link to shinny app** :
+https://info201af.shinyapps.io/shiny_app/
