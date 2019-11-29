@@ -14,7 +14,7 @@ visual_1 <- fluidPage(
              selectInput("sex", "display sex of the groups",
                          c("All", "Male", "Female")
              ),
-             textInput("country", "Country: ")
+             selectInput("country", "Country: ", suicide_rate$country)
            )
            
     ),

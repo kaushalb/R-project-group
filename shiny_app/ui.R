@@ -57,8 +57,18 @@ ui_page <- dashboardPage(
       tabItem(tabName = "page_6",
               report_6
       ),
-      tabItem(tabName = "Visualization_1",
-        visual_1 
+      tabItem(tabName = "Visualization_1", sidebarPanel(
+        #wellPanel(
+          h4("Filter"),
+          selectInput("sex", "display sex of the groups",
+                      c("All", "Male", "Female")
+          ),
+          selectInput("country", "Country: ", suicide_rate$country)
+        #)
+      ), mainPanel(
+        plotOutput("plot"), 
+        textOutput("x")
+      )
         ),
       tabItem(tabName = "Visualization_2",
         visual_2
