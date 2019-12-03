@@ -3,6 +3,7 @@ library(plotly)
 library(dplyr)
 library(ggplot2)
 library(rsconnect)
+library(kableExtra)
 
 
 dictionary <- read.csv("dict.csv", fileEncoding="UTF-8-BOM", stringsAsFactors = F)

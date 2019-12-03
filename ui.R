@@ -72,6 +72,8 @@ report_page <- fluidPage(
 # Research question
 report_2 <- fluidPage(
   h2("Research Questions"),
+  br(),
+  p("These are the main questions that we are attempting to answer through our project:"),
   shiny::tags$ol(
     shiny::tags$li("Does gdp per capita affect the suicide rates?"),
     shiny::tags$li("How suicide rates have been changed throughout each generation?"),
@@ -93,7 +95,8 @@ report_3 <- fluidPage(
      Health Organizationsdataset of suicide (Rusty).  The data set that has been
      put together here is nothing but suicide preventions? in the eyes of Rusty, and
      in order to contribute to this common goal, we need to analyze the data to find
-     trends that could help us understand the situation more to solve the issue.  In
+     trends that could help us understand the situation more to solve the issue."),
+     p("In
      the data set each observation is a group of people of a certain generation (age 
      group), either sex, of country, and its suicide rate of a year.  The variables
      of the observations in the data include: country, year, sex, age (grouped), 
@@ -107,7 +110,8 @@ report_3 <- fluidPage(
      it somewhat overlaps with the category of generation.  It's not exactly 
      synonymous, but we believe that the background people grow up with matters a lot
      more than numbers that might be a bit more accurate -- this would be easier for 
-     the general audience as well.  Another thing is we choose to keep only gdp per 
+     the general audience as well.:"), 
+     p("Another thing is we choose to keep only gdp per 
      capita instead of gdp of the whole country, as the gdp of the whole country does
      not represent the living situation of the people as the size of countries vary a
      lot.  The raw numbers of suicide and population has been removed as the variable
@@ -132,12 +136,57 @@ report_4 <-fluidPage(
 
 report_5 <- fluidPage(
   h3("5.0 Technical description"),
-  h5("#tbd")
+  p("In order to get a clear and reasonable answer to our research questions, we downloaded a .csv file from kaggle
+     that contained over 200 observations and around 12 variables. Each variable in the dataset was important to answering
+     the research questions. The major libraries used include the following:"), 
+  shiny::tags$ol(
+    shiny::tags$li("Shiny "),
+    shiny::tags$li("Plotly"),
+    shiny::tags$li("dplyr"), 
+    shiny::tags$li("ggplot2"),
+    shiny::tags$li("kableExtra")
+  ),
+  p("The User Interface of the application contains 11 pages that are accessible to the viewer. In our app, we 
+    created the UI as well as the backend for the necessary query requests with the help of Shiny in RStudio. 
+    The apps pages are systematically placed in a coherent manner so as to step-by-step guide the user through the entire
+    problem situation and how we intended to derive results from it. For clarity purposes, Interactive Visualizations of data
+    were also included within the app. These were made with the help of the kableExtra Library."),
+  p("Our code was organized into 3 files: UI.R which contained the code for the User Interface of the application
+    , Server.R and app.R. All three were sourced at the same file directory. We were able to collaborate and work 
+    simultaneously on the app together by sharing the code on GitHub."),
+  p("By conducting our statistical analysis on the dataset we acquired, we were attempting to answer the research questions
+    that we had posed earlier with hopes of detecting a pattern or a trend from the data. We manipulated the data sets and
+    created visualizations as aids to guide us to a hypothesis.")
 )
 
 report_6 <- fluidPage(
   h3("6.0 Conclusion"),
-  h5("#tbd")
+  h5("Strengths and Weaknesses:"),
+  p("This application provides an insightful perspective to the several factors that play a role in suicide rates per 
+    country. One of the greatest strengths of this project is its vagueness in that aspect. By observing the various aspects
+    governing such a heavy and pressing matter of our society and comparing it numerically with other countries,this poject
+    really paves way to a lot of new research questions than that of what we we hoped to answer. For instance, by comparing
+    the suicide rates across countries, one could raise the question of how a country's traditions and culture could affect
+    suicide rates. There are some weaknesses presented in this project as well. Although we do cover a lot of variables
+    within our dataset, not all of them are fully utilized within the application, especially in the visualization of the 
+    data sections. "), 
+  br(), 
+  h5("Main Learrning Points:"),
+  p("To reflect on what we learned throughout the process, we understood how to deduce trends and patterns in data from
+    manipulating a dataset given and presenting their visualization for clearer comprehension. The more we continued to work
+    with our dataset, the easier it became for us to pose and answer our research question and base a hypothesis off of it.
+    We also learned how to tackle a small-scale data anlaytics project systematically - Coming up with a project
+    proposal, understanding the various processes of planning and execution, delegating 
+    tasks around as a group and how to achieve efficient results. Another great learning point was understanding to 
+    further degree, the nuances behind creating a shiny application with an interactive interface. Through this experience, 
+    we were able to wrangle data and manipulate it to higher degrees."), 
+  br(), 
+  h5("Future Scope:"), 
+  p("We do believe that a project covering such a sensitive yet essential topic would be taken to higher levels. As we 
+    continue to find answers in the forms of patterns to our research questions, even more questions may arise that could
+    be solved by either intergating new datasets or wrangling the current one. Each member of this team has now had 
+    a reasonable grasp of the technical side of creating a data wrangling application and this would definitely inspire
+    use to utilize our skills in the future on projects of larger-scales.")
 )
 
 
