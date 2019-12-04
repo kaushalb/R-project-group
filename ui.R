@@ -75,9 +75,9 @@ report_2 <- fluidPage(
   br(),
   p("These are the main questions that we are attempting to answer through our project:"),
   shiny::tags$ol(
-    shiny::tags$li("Does gdp per capita affect the suicide rates?"),
-    shiny::tags$li("How suicide rates have been changed throughout each generation?"),
-    shiny::tags$li("How does sex affect suicide rates?")
+    shiny::tags$li("Does gdp per capita affect the suicide rates with respect to generations?"),
+    shiny::tags$li("Does higher GDP leads to lower suicide rates??"),
+    shiny::tags$li("How have the suicide rates changed in the past years?")
   )
 )
 
@@ -124,14 +124,16 @@ report_3 <- fluidPage(
 
 report_4 <-fluidPage(
   h3("4.0 Information Visualizations "),
-  h5("To answer the Research questions, we will use a scatter plot of gdp per capita
-     vs suicide rates, with each dot being an observation.  The analysis of this
-     would answer research question 1.  To answer research question 2 we would give
-     the option to change the colors of the observations by generation; and for
-     question 3 we could apply the same concept and change the color by sex.  If the
-     observation is missing gdp per capita, it would be eliminated from the
-     scatterplot of gdp per capita vs suicide rates.  On the sidebar there would be
-     options to show only certain sex, certain generations, etc.")
+  h5("To answer research question 1, we will use a scatter plot of gdp per capita
+     vs suicide rates for the first plot, with each dot being an observation.  On the side there will be the option to 
+     select gender/sex and country to see more trends within nation or gender/sex."),
+  br(),
+  h5("On research question 2 we hypotehsized that 'higher gdp leads to lower suicide rates', proposing a hypothesis value of 
+     the multiplication of gdp per capita and suicide rate per 100k population --- by this we can spot out extremely high values
+      that signify high gdp with high suicide rates or low values that present the opposite."),
+  br(),
+  h5("On research question 3 an examination of suicide rates over the past years have been brought up.  Perhaps there's contrast
+     between the general trends and individual groups.")
 )
 
 report_5 <- fluidPage(
@@ -169,7 +171,7 @@ report_6 <- fluidPage(
     the suicide rates across countries, one could raise the question of how a country's traditions and culture could affect
     suicide rates. There are some weaknesses presented in this project as well. Although we do cover a lot of variables
     within our dataset, not all of them are fully utilized within the application, especially in the visualization of the 
-    data sections. "), 
+    data sections."), 
   br(), 
   h5("Main Learrning Points:"),
   p("To reflect on what we learned throughout the process, we understood how to deduce trends and patterns in data from
@@ -277,7 +279,8 @@ visual_1 <- fluidPage(
       selectInput("sex", "Gender",
                   c("All", "male", "female")
       ),
-      selectInput("country", "Country: ", countries)
+      selectInput("country", "Country: ", 
+                  c("All", countries))
       
     ),
     
@@ -304,15 +307,16 @@ visual_2 <- fluidPage(
     sidebarPanel(
       selectInput("sex2", "Gender:", 
                   c("All", "male", "female")),
-      selectInput("country2", "Country: ", countries),
+      selectInput("country2", "Country: ", 
+                  c("All", countries)),
       hr(),
       helpText("Data from Kaggle.")
     ),
     # Create a spot for the barplot
     mainPanel(
-      h2("Average suicide rate by Generations"),
+      h2("Generations vs Main Hypothesis"),
       plotOutput("plot2"),
-      h2("Suicide Rate by the year"),
+      h2("Suicide Rate by Year"),
       plotOutput("plot3")
     )
   )
