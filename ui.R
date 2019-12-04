@@ -240,6 +240,13 @@ appendix_2 <- fluidPage(
     to.")
 )
 
+appendix_3 <- fluidPage(
+  h2("Envisioning Cards"), 
+  h4("Consider Children"), 
+  h4("Widespread Use"), 
+  h4("Crossing national boundaries")
+)
+
 
 visual_1 <- fluidPage(    
   titlePanel("Suicide Rate vs GDP per Capita"),
@@ -286,7 +293,7 @@ visual_2 <- fluidPage(
     ),
     # Create a spot for the barplot
     mainPanel(
-      h2("Average suicide rate by the age group"),
+      h2("Average suicide rate by Generations"),
       plotOutput("plot2"),
       h2("Suicide Rate by the year"),
       plotOutput("plot3")
@@ -311,7 +318,8 @@ ui_page <- dashboardPage(
       menuItem("Technical description", tabName = "page_5"),
       menuItem("Conclusion", tabName = "page_6"),
       menuItem("Appendix", tabName = "dictionary"),
-      menuItem("Reflection of members", tabName = "reflection")
+      menuItem("Reflection of members", tabName = "reflection"), 
+      menuItem("Envisioning cards", tabName = "env")
     )
   ),
   dashboardBody(
@@ -363,6 +371,9 @@ ui_page <- dashboardPage(
       ),
       tabItem(tabName = "reflection",
         appendix_2      
+              ), 
+      tabItem(tabName = "env",
+              appendix_3
               )
     )
   ) #dashbody end

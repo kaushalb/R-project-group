@@ -33,8 +33,8 @@ server_func <- function(input, output) {
       df <- df %>% filter(sex==sex_var)
     }
     df <- df %>% filter(country==input$country2)
-    df %>% group_by(age) %>% summarise(avg=mean(suicides_per_100k_pop, na.rm=T)) %>% 
-      ggplot(aes(x=age, y=avg)) + geom_bar(stat="identity", fill="steelblue") 
+    df %>% group_by(generation) %>% summarise(avg=mean(suicides_per_100k_pop, na.rm=T)) %>% 
+      ggplot(aes(x=generation, y=avg)) + geom_bar(stat="identity", fill="steelblue") 
     
   })
   
