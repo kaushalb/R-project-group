@@ -21,7 +21,7 @@ server_func <- function(input, output) {
         df <- df %>% filter(sex==sex_var)
       }
       df <- df %>% filter(country==input$country)
-      ggplot(data=df, aes(y=suicides_per_100k_pop,x=gdp_per_capita)) + geom_point() + 
+      ggplot(data=df, aes(y=suicides_per_100k_pop,x=gdp_per_capita, color = generation)) + geom_point() + 
         labs(x="GDP Per Capita", y="Suicides Per 100K Population")
       
   })
