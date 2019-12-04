@@ -1,8 +1,6 @@
 
 ```{r}
-suicide_rate <- read.csv("master.csv", fileEncoding = "UTF-8-BOM")
-df <-suicide_rate
-colnames(df)
+
 ```
 
 

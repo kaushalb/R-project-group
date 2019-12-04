@@ -241,10 +241,27 @@ appendix_2 <- fluidPage(
 )
 
 appendix_3 <- fluidPage(
-  h2("Envisioning Cards"), 
-  h4("Consider Children"), 
+  h2("Envisioning Cards Applied"), 
+  h4("Consider Children"),
+  br(),
+  h5("When jumping into the subject of informatics, we've always been told about how
+     analyzing the data and such helps us to predict the future, and we settled on a
+     topic that inderectly relates to the future of the human species that especially
+     impacts the youth, which is suicide."),
+  br(),
   h4("Widespread Use"), 
-  h4("Crossing national boundaries")
+  br(),
+  h5("The context of suicide is broad, it's something that can happen to anyone and
+      anytime.  If a solution is found it could put an end to the horrors of this social
+     issue."),
+  br(),
+  h4("Crossing national boundaries"),
+  br(),
+  h5("In this project the topic of countries has been brought into discussion as well, 
+     for that we can see in different datasets regarding different countries there are
+     fundemental differences, may it be a crisis at that time or inherenet cultural 
+     differences.  What's important is that we're able to understand each other and
+     be willing to help out each other.")
 )
 
 
