@@ -45,7 +45,7 @@ server_func <- function(input, output) {
       df <- df %>% filter(sex==sex_var)
     }
     df <- df %>% filter(country==input$country2)
-    ggplot(data=df, aes(x=year, y=suicides_per_100k_pop)) + geom_point() + geom_line()
+    ggplot(data=df, aes(x=year, y=suicides_per_100k_pop)) + geom_point() + geom_smooth()
     
   })
   
