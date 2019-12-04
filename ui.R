@@ -76,7 +76,7 @@ report_2 <- fluidPage(
   p("These are the main questions that we are attempting to answer through our project:"),
   shiny::tags$ol(
     shiny::tags$li("Does gdp per capita affect the suicide rates with respect to generations?"),
-    shiny::tags$li("Does higher GDP leads to lower suicide rates?"),
+    shiny::tags$li("How consistent is the relationship between gdp and suicide rates?"),
     shiny::tags$li("How have the suicide rates changed in the past years?")
   )
 )
