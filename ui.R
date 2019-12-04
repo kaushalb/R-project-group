@@ -288,7 +288,11 @@ visual_1 <- fluidPage(
     mainPanel(
       
       # Output: Histogram ----
-      plotOutput(outputId = "plot1")
+      plotOutput(outputId = "plot1"),
+      h5("To answer research question 1, we will use a scatter plot of gdp per capita
+     vs suicide rates for the first plot, with each dot being an observation.  On the side there will be the option to 
+     select gender/sex and country to see more trends within nation or gender/sex.")
+      
       
     )
   )
