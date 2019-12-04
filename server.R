@@ -20,8 +20,12 @@ server_func <- function(input, output) {
       if(sex_var!="All"){
         df <- df %>% filter(sex==sex_var)
       }
-      df <- df %>% filter(country==input$country)
+      country_var <- input$country
+      if(country_var != "All"){
+        df <- df %>% filter(country==country_var)
+      }
       ggplot(data=df, aes(y=suicides_per_100k_pop,x=gdp_per_capita, color = generation)) + geom_point() + 
+        geom_smooth() + 
         labs(x="GDP Per Capita", y="Suicides Per 100K Population")
       
   })
@@ -33,8 +37,8 @@ server_func <- function(input, output) {
       df <- df %>% filter(sex==sex_var)
     }
     df <- df %>% filter(country==input$country2)
-    df %>% group_by(generation) %>% summarise(avg=mean(suicides_per_100k_pop, na.rm=T)) %>% 
-      ggplot(aes(x=generation, y=avg)) + geom_bar(stat="identity", fill="steelblue") 
+    df %>% group_by(generation) %>% summarise(avg_suicide_gdp=mean(suicides_per_100k_pop, na.rm=T) * mean(gdp_per_capita)) %>% 
+      ggplot(aes(x=generation, y= avg_suicide_gdp)) + geom_bar(stat="identity", fill="steelblue")
     
   })
   
